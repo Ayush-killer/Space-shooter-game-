@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Strike: God Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="menu-screen" class="screen active">
+            <h1 class="glow-text">NEON STRIKE PRO</h1>
+            <p id="lock-msg" style="color:#ff0055; font-size:12px; height:20px;"></p>
+            <div id="level-grid"></div>
+        </div>
+
+        <div id="hud">
+            <div class="hud-top">
+                <div class="stat">LVL: <span id="lvl-txt">1</span></div>
+                <div class="stat">⏱️ <span id="timer-txt">00:00</span></div>
+                <div class="stat">🔥 x<span id="combo-txt">1</span></div>
+            </div>
+            <div class="hud-mid">
+                <div class="stat">💰 SCORE: <span id="score-txt">0</span></div>
+            </div>
+            <div id="boss-ui" style="display:none;">
+                <div class="bar-bg boss-bar"><div id="boss-fill" class="bar-fill"></div></div>
+            </div>
+            <div class="bar-bg player-hp"><div id="hp-fill" class="bar-fill"></div></div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="win-screen" class="screen">
+            <h1 class="win-txt">MISSION CLEAR ✅</h1>
+            <button class="pro-btn" onclick="nextLevel()">NEXT LEVEL</button>
+        </div>
+        <div id="fail-screen" class="screen">
+            <h1 class="fail-txt">GAME OVER 💀</h1>
+            <button class="pro-btn" onclick="location.reload()">TRY AGAIN</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
