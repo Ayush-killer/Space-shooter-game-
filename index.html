@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <div id="game-container">
         <div id="menu-screen" class="screen active">
             <h1 class="glow-text">NEON STRIKE PRO</h1>
-            <p id="lock-msg" style="color:#ff0055; font-size:12px; height:20px;"></p>
+            <p id="lock-msg" style="color:#ff0055; font-size:14px; height:20px; font-weight:bold;"></p>
             <div id="level-grid"></div>
         </div>
 
@@ -24,8 +24,9 @@
             <div class="hud-mid">
                 <div class="stat">💰 SCORE: <span id="score-txt">0</span></div>
             </div>
-            <div id="boss-ui" style="display:none;">
-                <div class="bar-bg boss-bar"><div id="boss-fill" class="bar-fill"></div></div>
+            <div id="boss-ui" style="display:none; width: 100%; text-align: center;">
+                <p style="color: #ffea00; font-size: 10px; margin: 2px;">BOSS HP</p>
+                <div class="bar-bg boss-bar" style="margin: 0 auto;"><div id="boss-fill" class="bar-fill"></div></div>
             </div>
             <div class="bar-bg player-hp"><div id="hp-fill" class="bar-fill"></div></div>
         </div>
@@ -34,7 +35,7 @@
 
         <div id="win-screen" class="screen">
             <h1 class="win-txt">MISSION CLEAR ✅</h1>
-            <button class="pro-btn" onclick="nextLevel()">NEXT LEVEL</button>
+            <button class="pro-btn" onclick="location.reload()">NEXT MISSION</button>
         </div>
         <div id="fail-screen" class="screen">
             <h1 class="fail-txt">GAME OVER 💀</h1>
@@ -44,4 +45,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
